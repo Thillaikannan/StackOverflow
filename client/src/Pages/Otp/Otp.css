@@ -35,7 +35,8 @@ gap: 1rem;
 
 .tx2{
     margin-bottom: 1.5rem; 
-color: #ffffff; 
+color: black; 
+
 font-size: 1.875rem;
 line-height: 2.25rem; 
 font-weight: 500; 
@@ -61,6 +62,8 @@ text-align: center;
 }
 .bg-emerald-600{
     display: flex; 
+    
+    padding: 10px opx;
 padding-top: 0.625rem;
 padding-bottom: 0.625rem; 
 color: #ffffff; 
@@ -136,3 +139,47 @@ animation: spin 1s linear infinite;
   }
 }; 
   
+.ph{
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.box {
+  padding: 20px 10px;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+}
+
+
+
+.sub{
+  padding: 10px 8px;
+  margin: 10px 0px;
+  margin-right: 10px;
+  margin-left: 30px;
+  background-color: #0a95ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.sub-1{
+    padding: 10px 8px;
+    margin: 10px 0px;
+    margin-right: 10px;
+    margin-left: 30px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .sub:hover {
+    background-color: #0074cc;
+  }

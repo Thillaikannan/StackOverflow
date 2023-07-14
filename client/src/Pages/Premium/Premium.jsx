@@ -1,3 +1,4 @@
+
 import "./Premium.css";
 import { useNavigate} from 'react-router-dom';
 
@@ -129,3 +130,86 @@ function Premium() {
 }
 
 export default Premium;
+
+
+/*
+import React,{useState} from 'react'
+import './Plans.css'
+import { plansData } from '../Data/plansData'
+//import LeftSidebar from '../../components/LeftSidebar/LeftSidebar'
+import whiteTick from '../../assets/whiteTick.svg' 
+//import Payment from '../Payment/Payment'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import StripeCheckOut from 'react-stripe-checkout'
+
+const Plans = () => {
+  const [amount, setAmount] = useState({
+    name: 'course',
+    price: 100*100,
+
+  })
+
+  const makePayment = async (token) => {
+    const body = {
+      token,
+      amount
+    }
+  const headers = {
+    "content-Type": "application.json"
+  }
+  try {
+      const response = await fetch("http://localhost:5000/payment", {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body),
+      })
+      console.log(response)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+return (
+  <div className='plans-container'>
+    <div className='programs-header' style={{ gap: '2rem'}}>
+      <h1 className='stroke-text'>Ready to Upgrade your Plans and enjoy</h1>
+     
+    </div>
+    <div className='plans'>
+      {plansData.map((plan, i) => (
+        <div className='plan' key={i} >
+          {plan.icon}
+          <span>{plan.name}</span>
+          <span>₹{plan.price}</span>
+
+          <div className='features'>
+              {plan.features.map((feature, i) => (
+                <div className='feature'>
+                    <img src={whiteTick} alt='' width='18'/>
+                    <span key={i}>{feature}</span>
+                </div>
+              ))}
+          </div>
+          <StripeCheckOut
+          stripeKey='pk_test_51NQsYxSIf2HZdWLG7O29bYJlQKntjpELhI9WXvTsWcOQoJMgSpedDR7CwV0HlHllEhGJAdJQLM9j6guuTOtQ1QUc00oe5Aq04c' 
+        //  stripe_secret_key='bkqe-fean-euuj-cmzf-szrf' 
+          token={makePayment}
+          name='Buy Options'
+           amount={amount.price}
+           currency='INR'
+           
+           
+              >
+            <button className='btn'>Join Now </button>
+            </StripeCheckOut>
+        </div>
+      ))}
+    </div>
+    
+  </div>
+)
+
+              }              
+export default Plans
+*/

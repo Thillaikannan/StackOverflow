@@ -13,6 +13,8 @@ import CommunityHome from "./Pages/Community/CommunityHome";
 import PostPage from "./Pages/PostPage/PostPage";
 import Otp from "./Pages/Otp/Otp";
 import Premium from "./Pages/Premium/Premium";
+import Homes from './components/Homes/Home';
+import ProtectedRoute from "./components/Homes/ProtectedRoute"
 
 const AllRoutes = () => {
   return (
@@ -25,11 +27,13 @@ const AllRoutes = () => {
       <Route path="/Tags" element={<Tags />} />
       <Route path="/Users" element={<Users />} />
       <Route path="/Otp" element={<Otp />} />
+      <Route path="/home" element={ <Homes /> } />
       <Route path="/Users/:id" element={<UserProfile />} />
       <Route path="/stackoverflow-community/post/:id" element={<PostPage />} />
       <Route path="/stackoverflow-community" element={<CommunityHome />} />
       <Route path="/Premium" element={<Premium />} />
     </Routes>
+    
   );
 };
 

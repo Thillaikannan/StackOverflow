@@ -6,6 +6,7 @@ import usersReducer from "./users";
 import postReducer from "./post";
 import sideBar from "./sideBar";
 import chatbot from "./chatbot";
+import otpReducer from "./otp";
 
 export default combineReducers({
   authReducer,
@@ -15,4 +16,5 @@ export default combineReducers({
   postReducer,
   sideBar,
   chatbot,
+  otpReducer,
 });

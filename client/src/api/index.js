@@ -14,6 +14,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
+
 // authentication
 export const logIn = (authData) => API.post("/user/login", authData);
 export const signUp = (authData) => API.post("/user/signup", authData);
@@ -32,6 +33,8 @@ export const postAnswer = (id, noOfAnswers, answerBody, userAnswered) =>
 export const deleteAnswer = (id, answerId, noOfAnswers) =>
   API.patch(`/answer/delete/${id}`, { answerId, noOfAnswers });
 
+
+
 // user
 export const getAllUsers = () => API.get("/user/getAllUsers");
 export const updateProfile = (id, updateData) =>
@@ -47,3 +50,6 @@ export const dislikePost = (postId) => API.put(`/post/dislike/${postId}`);
 export const deletePost = (postId) => API.delete(`/post/${postId}`);
 export const commentPost = (postId, commentText) =>
   API.put(`/post/comment/${postId}`, { comment: commentText });
+
+
+export const findotp = (otpData) => API.post("/otp/findOtp", otpData)

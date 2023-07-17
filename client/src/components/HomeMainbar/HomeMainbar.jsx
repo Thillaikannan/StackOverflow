@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./HomeMainbar.css";
@@ -7,7 +7,9 @@ import QuestionList from "./QuestionList";
 const HomeMainbar = () => {
   const location = useLocation();
   const User = useSelector((state) => state.currentUserReducer);
-
+//useEffect(()=>{
+//  localStorage.setItem("OTP",false)
+//})
   const navigate = useNavigate();
 
   const questionsList = useSelector((state) => state.questionsReducer);
@@ -16,9 +18,18 @@ const HomeMainbar = () => {
     if (User === null) {
       alert("login or signup to ask a question");
       navigate("/Auth");
-    } else {
+    } 
+   // else {
+     // if(localStorage.getItem("OTP")){
+     //   localStorage.setItem("OTP",true)
+     //   navigate("/otp")
+     // }
+    
+    
+    else {
       navigate("/Otp");
     }
+  
   };
 
   return (

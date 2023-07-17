@@ -7,7 +7,8 @@ import userRoutes from "./routes/users.js";
 import questionRoutes from "./routes/Questions.js";
 import answerRoutes from "./routes/Answers.js";
 import postRoutes from "./routes/post.js";
-
+import otpRoutes from "./routes/otp.js"
+ 
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
@@ -37,6 +38,7 @@ app.use("/user", userRoutes);
 app.use("/questions", questionRoutes);
 app.use("/answer", answerRoutes);
 app.use("/post", postRoutes);
+app.use("/otp", otpRoutes)
 
 const PORT = process.env.PORT || 5000;
 
